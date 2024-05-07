@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-end gap-6 px-2.5 py-5 bg-[#1D1A31]">
+    <nav className="flex justify-end gap-6 px-2.5 py-5">
       <ul className="flex gap-3 font-semibold text-white">
         <li className="hover:text-[#BFD7EA]">
           <Link href="#">Sobre mi</Link>

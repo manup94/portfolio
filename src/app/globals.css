@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body{
-    background-color: #DAF7DC;
+    max-width: 1200px;
+    margin: auto;
 }
+
+.bg-pattern{
+    background-color: #00051a;
+        opacity: 1;
+        background-image: radial-gradient(#111559 1.55px, #00051a 1.55px);
+        background-size: 31px 31px;
+}
+
