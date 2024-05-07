@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 export interface Experience {
+  id: number;
   puesto: string;
   empresa: string;
   responsabilidades: string;
