@@ -4,7 +4,10 @@ export interface Experience {
   id: number;
   puesto: string;
   empresa: string;
+  stack: string[];
   responsabilidades: string;
+  fechaInicio: string;
+  fechaFinal: string;
 }
 
 export interface ExperienceItemProps {
@@ -13,12 +16,18 @@ export interface ExperienceItemProps {
 
 const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <div>
-        <h2>{experience.puesto}</h2>
-        <h3>{experience.empresa}</h3>
+        <h2 className="text-xl font-bold">{experience.puesto}</h2>
+        <div className="flex gap-3 items-center">
+          <h3 className="text-lg font-semibold">{experience.empresa}</h3>
+          <p className="text-sm">
+            {experience.fechaInicio} - {experience.fechaFinal}
+          </p>
+        </div>
+        <div></div>
       </div>
-      <div className="text-xl">
+      <div className="text-lg">
         <p>{experience.responsabilidades}</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Experience from "./components/experience/experience";
+import ExperienceGrid from "./components/experience/experience-grid";
 import Hero from "./components/hero";
 import Separator from "./components/separator";
 
@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Hero />
       <Separator text="Experiencia" />
-      <Experience />
+      <ExperienceGrid />
       <Separator text="Estudios" />
     </div>
   );
