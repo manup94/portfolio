@@ -5,7 +5,7 @@ const ExperienceGrid = () => {
   return (
     <section
       id="experiencia"
-      className="w-full py-12 md:py-24 lg:py-32 h-[80vh]"
+      className="w-full flex items-center py-12 md:py-24 lg:py-32 h-[80vh]"
     >
       <div className="container px-4 md:px-6">
         <div className="space-y-4 text-white">

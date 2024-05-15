@@ -3,13 +3,16 @@ import { FC } from "react";
 export interface BadgetProps {
   icon: JSX.Element;
   text?: string;
+  className?: string;
 }
 
-const Badget: FC<BadgetProps> = ({ icon, text }) => {
+const Badget: FC<BadgetProps> = ({ icon, text, className }) => {
   return (
-    <div className="w-24 mt-4 flex items-center rounded-md bg-slate-200/10 px-2 py-1">
+    <div
+      className={`${className} mt-4 gap-2 flex items-center rounded-md bg-slate-200/10 px-2 py-1`}
+    >
       {icon}
-      <p className="text-white font-semibold">{text}</p>
+      <p className="text-white text-sm font-semibold">{text}</p>
     </div>
   );
 };

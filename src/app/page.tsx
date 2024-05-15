@@ -1,14 +1,19 @@
+import EducationGrid from "./components/education-grid";
 import ExperienceGrid from "./components/experience/experience-grid";
 import Hero from "./components/hero";
+import ProjectsGrid from "./components/projects/projects-grid";
 import Separator from "./components/separator";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <Separator text="Experiencia" />
       <ExperienceGrid />
       <Separator text="Estudios" />
-    </div>
+      <EducationGrid />
+      <Separator text="Proyectos" />
+      <ProjectsGrid />
+    </>
   );
 }

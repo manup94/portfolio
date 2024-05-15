@@ -20,7 +20,7 @@ const Hero = () => {
         enfoque equilibra la estética visual y la funcionalidad para ofrecer
         experiencias de usuario excepcionales.
       </span>
-      <Badget text="Sevilla" icon={<LocationIcon />} />
+      <Badget className="w-24" text="Sevilla" icon={<LocationIcon />} />
     </section>
   );
 };
