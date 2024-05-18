@@ -3,6 +3,28 @@
         "id": 0,
         "name": "Uplanet ONG",
         "url": "https://www.uplanet.es/",
-        "image": "uplanet.png",
+        "stack":["Next", "React", "TypeScript", "Sanity", "Tailwind"],
+        "image": "uplanet.png"
+    },
+    {
+        "id": 1,
+        "name": "BandoleroShop",
+        "url": "https://bandolero-shop-client.vercel.app/",
+        "stack":["Next", "React", "TypeScript", "Strapi", "Stripe", "Tailwind"],
+        "image": "bandoleroshop.png"
+    },
+    {
+        "id": 2,
+        "name": "CinemXperience",
+        "url": "https://cinemxperience.netlify.app/",
+        "stack":["React", "Node", "Bootstrap", "MongoDB"],
+        "image": "cinemxperience.png"
+    },
+    {
+        "id": 3,
+        "name": "Eventalia",
+        "url": "https://cinemxperience.netlify.app/",
+        "stack":["Node", "Handlebars", "Node", "Bootstrap", "MongoDB"],
+        "image": "eventalia.png"
     }
 ]
