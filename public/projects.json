@@ -1,0 +1,31 @@
+[
+    {
+        "id": 0,
+        "name": "Uplanet ONG",
+        "url": "https://www.uplanet.es/",
+        "stack":["Next", "React", "TypeScript", "Sanity", "Tailwind"],
+        "description":"Desarrollo de la nueva página web para la ONG Uplanet como desarrollador freelance. Utilizamos Next.js para el desarrollo del frontend y para el backend, establecimos una conexión con el CRM Sanity. Esto permitió al cliente mantener y personalizar su página web sin necesidad de intervenir en el código directamente",
+        "imageUrl": "/uplanet.png"
+    },
+    {
+        "id": 1,
+        "name": "BandoleroShop",
+        "url": "https://bandolero-shop-client.vercel.app/",
+        "stack":["Next", "React", "TypeScript", "Strapi", "Stripe", "Tailwind"],
+        "imageUrl": "../../public/uplanet.png"
+    },
+    {
+        "id": 2,
+        "name": "CinemXperience",
+        "url": "https://cinemxperience.netlify.app/",
+        "stack":["React", "node", "Bootstrap", "Mongodb"],
+        "imageUrl": "../../public/uplanet.png"
+    },
+    {
+        "id": 3,
+        "name": "Eventalia",
+        "url": "https://cinemxperience.netlify.app/",
+        "stack":["node", "Handlebars", "Bootstrap", "Mongodb"],
+        "imageUrl": "../../public/uplanet.png"
+    }
+]
