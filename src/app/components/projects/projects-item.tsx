@@ -12,6 +12,7 @@ import Mongodb from "@/app/icons/mongodb";
 import Strapi from "@/app/icons/strapi";
 import Stripe from "@/app/icons/stripe";
 import Badget from "../experience/badget";
+import Link from "next/link";
 
 export interface Project {
   id: number;
@@ -42,28 +43,33 @@ const icons: any = {
 
 const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
-    <div className="p-2.5 isolate aspect-video rounded-xl bg-white/10 shadow-lg ring-1 ring-black/5">
+    <Link
+      href={project.url}
+      className="p-4 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate aspect-video rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
+    >
       <div
-        className="flex items-center justify-between
+        className="flex gap-3 items-center justify-between
       "
       >
-        <div className="w-2/3 flex">
+        <div className="flex flex-col justify-between">
           <h2 className="text-white text-xl font-bold">{project.name}</h2>
-          {project.stack.map((stackItem, index) => {
-            const IconComponent = icons[stackItem];
-            return (
-              <Badget key={index} text={stackItem} icon={<IconComponent />} />
-            );
-          })}
+          <div className="grid grid-cols-4 gap-x-3 ">
+            {project.stack.map((stackItem, index) => {
+              const IconComponent = icons[stackItem];
+              return (
+                <Badget key={index} text={stackItem} icon={<IconComponent />} />
+              );
+            })}
+          </div>
         </div>
         <div className="w-1/3">
-          <img className="w-1/3" src={project.imageUrl} />
+          <img className="w-4/5" src={project.imageUrl} />
         </div>
       </div>
       <div>
-        <p className="text-white text-sm">{project.description}</p>
+        <p className="text-white">{project.description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

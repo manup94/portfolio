@@ -3,16 +3,17 @@
         "id": 0,
         "name": "Uplanet ONG",
         "url": "https://www.uplanet.es/",
-        "stack":["Next", "React", "TypeScript", "Sanity", "Tailwind"],
-        "description":"Desarrollo de la nueva página web para la ONG Uplanet como desarrollador freelance. Utilizamos Next.js para el desarrollo del frontend y para el backend, establecimos una conexión con el CRM Sanity. Esto permitió al cliente mantener y personalizar su página web sin necesidad de intervenir en el código directamente",
+        "stack":["Next", "TypeScript", "Sanity", "Tailwind"],
+        "description":"Desarrollo de la nueva página web para la ONG Uplanet. Utilizamos Next.js para el desarrollo del frontend y para el backend, establecimos una conexión con el CRM Sanity. Esto permitió al cliente mantener y personalizar su página web sin necesidad de intervenir en el código directamente",
         "imageUrl": "/uplanet.png"
     },
     {
         "id": 1,
         "name": "BandoleroShop",
         "url": "https://bandolero-shop-client.vercel.app/",
-        "stack":["Next", "React", "TypeScript", "Strapi", "Stripe", "Tailwind"],
-        "imageUrl": "../../public/uplanet.png"
+        "stack":["Next", "TypeScript", "Strapi", "Stripe", "Tailwind"],
+        "description":"Ecommerce que brinda una experiencia completa a los usuarios. Los usuarios pueden registrarse para agregar productos a su carrito y posteriormente, proceder a una pasarela de pago de Stripe, la cual gestiona los pagos desde el backend. Además, los usuarios tienen la opción de incluir productos en su lista de deseos. A través de su panel personal, pueden administrar sus datos, direcciones y visualizar pedidos anteriores.",
+        "imageUrl": "/bandoleroshop.png"
     },
     {
         "id": 2,
