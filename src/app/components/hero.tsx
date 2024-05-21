@@ -1,4 +1,5 @@
 import LocationIcon from "../icons/location";
+import MotoIcon from "../icons/moto";
 import Badget from "./experience/badget";
 
 const Hero = () => {
@@ -20,7 +21,10 @@ const Hero = () => {
         enfoque equilibra la estética visual y la funcionalidad para ofrecer
         experiencias de usuario excepcionales.
       </span>
-      <Badget className="w-24" text="Sevilla" icon={<LocationIcon />} />
+      <div className="flex gap-3">
+        <Badget text="Sevilla" icon={<LocationIcon />} />
+        <Badget text="Motociclismo" icon={<MotoIcon />} />
+      </div>
     </section>
   );
 };
