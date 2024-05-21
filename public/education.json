@@ -1,7 +1,7 @@
 [{
     "id": 0,
-    "fechaInicio": "04/04/2023",
-    "fechaFinal": "09/06/2023",
+    "fechaInicio": "04/2023",
+    "fechaFinal": "06/2023",
     "institucion": "IronHack",
     "carrera": "Fullstack web Developer",
     "descripcion": "Bootcamp de desarrollo web de 9 semanas, aprendemos tanto el desarrollo frontend como el backend. Durante el programa, nos sumergimos en las tecnologías de frontend, como React, HTML y CSS, para construir interfaces de usuario atractivas y funcionales. Además, exploramos el lado del backend, abarcando Node.js, MongoDB y Express, para crear aplicaciones consistentes y escalables"

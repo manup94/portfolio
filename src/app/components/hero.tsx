@@ -1,6 +1,8 @@
 import LocationIcon from "../icons/location";
-import MotoIcon from "../icons/moto";
+import BikeIcon from "../icons/moto";
 import Badget from "./experience/badget";
+import TecnologyIcon from "../icons/tecnology";
+import VideoGamesIcon from "../icons/videogames";
 
 const Hero = () => {
   return (
@@ -23,7 +25,9 @@ const Hero = () => {
       </span>
       <div className="flex gap-3">
         <Badget text="Sevilla" icon={<LocationIcon />} />
-        <Badget text="Motociclismo" icon={<MotoIcon />} />
+        <Badget text="Tecnologia" icon={<TecnologyIcon />} />
+        <Badget text="Videojuegos" icon={<VideoGamesIcon />} />
+        <Badget text="Motociclismo" icon={<BikeIcon />} />
       </div>
     </section>
   );

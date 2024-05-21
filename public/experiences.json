@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "fechaInicio": "01/09/2023",
-    "fechaFinal": "31/10/2023",
+    "fechaInicio": "09/2023",
+    "fechaFinal": "10/2023",
     "puesto": "Fullstack Developer",
     "stack": ["Next", "React", "TypeScript", "Sanity", "Tailwind"],
     "empresa": "Freelance",
@@ -10,8 +10,8 @@
   },
   {
     "id": 1,
-    "fechaInicio": "01/11/2023",
-    "fechaFinal": "30/04/2024",
+    "fechaInicio": "11/2023",
+    "fechaFinal": "04/2024",
     "puesto": "Frontend Developer",
     "stack": ["Next", "React", "TypeScript", "Tailwind", "Prisma"],
     "empresa": "A-safe Digital",

@@ -26,9 +26,9 @@ const Navbar = () => {
           <Linkedin />
         </Link>
       </div>
-      <div className="flex gap-6  justify-around">
+      {/* <div className="flex gap-6  justify-around">
         <div className="text-white">switch</div>
-      </div>
+      </div> */}
     </nav>
   );
 };
