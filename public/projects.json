@@ -20,7 +20,7 @@
         "name": "CinemXperience",
         "url": "https://cinemxperience.netlify.app/",
         "description": "Sitio web de salas de cine. En este proyecto, añado un sistema de autenticación utilizando JWT (JSON Web Tokens) y lo conectamos a la API de TMDB (The Movie Database). El administrador tiene la capacidad de crear sesiones de cine, mientras que los usuarios pueden comprar entradas. Además, implementamos un buscador, una sección de las películas más populares (Top movies) y una lista de favoritos (watchlist).",
-        "stack":["React", "Node", "Bootstrap", "Mongodb"],
+        "stack":["React", "Node", "Bootstrap", "MongoDB"],
         "imageUrl": "/cinemxperience.png"
     }
 ]

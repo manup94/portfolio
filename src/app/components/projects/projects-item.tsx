@@ -8,7 +8,7 @@ import TypeScript from "@/app/icons/typescript";
 import Node from "@/app/icons/node";
 import Bootstrap from "@/app/icons/bootstrap";
 import Handlebars from "@/app/icons/handlebars";
-import Mongodb from "@/app/icons/mongodb";
+import MongoDB from "@/app/icons/mongodb";
 import Strapi from "@/app/icons/strapi";
 import Stripe from "@/app/icons/stripe";
 import Badget from "../experience/badget";
@@ -33,7 +33,7 @@ const icons: any = {
   Tailwind,
   Prisma,
   Sanity,
-  Mongodb,
+  MongoDB,
   Strapi,
   Stripe,
   Node,
