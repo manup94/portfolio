@@ -27,20 +27,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex gap-6  justify-around">
-        <ul className="flex gap-3 font-semibold text-white">
-          <li className="hover:text-[#BFD7EA]">
-            <Link href="#">Sobre mi</Link>
-          </li>
-          <li className="hover:text-[#BFD7EA]">
-            <Link href="#">Experiencia</Link>
-          </li>
-          <li className="hover:text-[#BFD7EA]">
-            <Link href="#">Estudios</Link>
-          </li>
-          <li className="hover:text-[#BFD7EA]">
-            <Link href="#">Proyectos</Link>
-          </li>
-        </ul>
         <div className="text-white">switch</div>
       </div>
     </nav>

@@ -9,10 +9,10 @@ export interface BadgetProps {
 const Badget: FC<BadgetProps> = ({ icon, text, className }) => {
   return (
     <div
-      className={`${className} mt-4 gap-2 flex items-center rounded-md bg-slate-200/10 px-2 py-1`}
+      className={`${className} mt-4 gap-2 inline-flex items-center rounded-md bg-slate-200/10 px-2 py-1`}
     >
       {icon}
-      <p className="text-white text-sm font-semibold">{text}</p>
+      <span className="text-white text-sm font-semibold">{text}</span>
     </div>
   );
 };

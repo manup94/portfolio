@@ -5,7 +5,7 @@ import React from "@/app/icons/react";
 import Tailwind from "@/app/icons/tailwind";
 import Sanity from "@/app/icons/sanity";
 import TypeScript from "@/app/icons/typescript";
-import node from "@/app/icons/node";
+import Node from "@/app/icons/node";
 import Bootstrap from "@/app/icons/bootstrap";
 import Handlebars from "@/app/icons/handlebars";
 import Mongodb from "@/app/icons/mongodb";
@@ -36,7 +36,7 @@ const icons: any = {
   Mongodb,
   Strapi,
   Stripe,
-  node,
+  Node,
   Bootstrap,
   Handlebars,
 };
@@ -45,15 +45,18 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
     <Link
       href={project.url}
-      className="p-4 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate aspect-video rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
+      className="py-4 px-2.5 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate aspect-video rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
     >
       <div
         className="flex gap-3 items-center justify-between
       "
       >
-        <div className="flex flex-col justify-between">
+        <div className="w-1/4">
+          <img className="max-w-22 mx-auto max-h-24" src={project.imageUrl} />
+        </div>
+        <div className="w-3/4 flex flex-col justify-between">
           <h2 className="text-white text-xl font-bold">{project.name}</h2>
-          <div className="grid grid-cols-4 gap-x-3 ">
+          <div className="flex flex-wrap gap-x-3 ">
             {project.stack.map((stackItem, index) => {
               const IconComponent = icons[stackItem];
               return (
@@ -62,11 +65,8 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
             })}
           </div>
         </div>
-        <div className="w-1/3">
-          <img className="w-4/5" src={project.imageUrl} />
-        </div>
       </div>
-      <div>
+      <div className="px-2">
         <p className="text-white">{project.description}</p>
       </div>
     </Link>
