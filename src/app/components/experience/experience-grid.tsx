@@ -1,4 +1,4 @@
-import experiences from "@/app/experiences.json";
+import experiences from "@/../public/experiences.json";
 import ExperienceItem from "./experience-item";
 
 const ExperienceGrid = () => {

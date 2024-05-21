@@ -1,4 +1,4 @@
-import educations from "@/app/education.json";
+import educations from "@/../public/education.json";
 import Ironhack from "../icons/ironhack";
 import Link from "next/link";
 
