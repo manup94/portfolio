@@ -45,13 +45,16 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
     <Link
       href={project.url}
-      className="py-4 px-2.5 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate aspect-video rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
+      className="py-4 px-2.5 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate  rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
     >
+      <div className="w-1/4 mx-auto sm:hidden flex">
+        <img className="max-w-22 mx-auto max-h-24" src={project.imageUrl} />
+      </div>
       <div
         className="flex gap-3 items-center justify-between
       "
       >
-        <div className="w-1/4">
+        <div className="w-1/4 sm:flex hidden">
           <img className="max-w-22 mx-auto max-h-24" src={project.imageUrl} />
         </div>
         <div className="w-3/4 flex flex-col justify-between">
@@ -66,7 +69,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
           </div>
         </div>
       </div>
-      <div className="px-2 text-lg">
+      <div className="px-2 md:text-lg text-base">
         <p className="text-white">{project.description}</p>
       </div>
     </Link>

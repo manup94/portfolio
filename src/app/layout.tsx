@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`bg-pattern ${GeistSans.className}`}>
+      <body className={`bg-pattern ${GeistSans.className} max-w-7xl mx-auto`}>
         <Navbar />
         {children}
       </body>

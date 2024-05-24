@@ -42,7 +42,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
             {experience.fechaInicio} - {experience.fechaFinal}
           </p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-row flex-wrap gap-x-3">
           {experience.stack.length > 0 &&
             experience.stack.map((stackItem, index) => {
               const IconComponent = icons[stackItem];
@@ -52,7 +52,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
             })}
         </div>
       </div>
-      <div className="text-lg">
+      <div className="md:text-lg text-base">
         <p>{experience.responsabilidades}</p>
       </div>
     </div>

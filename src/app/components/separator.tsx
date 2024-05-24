@@ -11,10 +11,10 @@ const Separator: FC<SeparatorProps> = ({ text }) => {
     <Link
       href={`#${text.toLowerCase()}`}
       aria-label={text}
-      className="flex flex-col mx-auto justify-center items-center font-semibold text-xl text-white group"
+      className="flex w-40 p-2 transition-all duration-300 ease-in-out flex-col mx-auto justify-center items-center font-semibold text-xl rounded-xl text-white group  hover:bg-white/5 hover:scale-110 shadow-lg ring-1 ring-black/5"
     >
       <p>{text}</p>
-      <ChevronDown className="w-7 transition-all duration-300 ease-in-out group-hover:scale-110" />
+      <ChevronDown className="w-7" />
     </Link>
   );
 };
