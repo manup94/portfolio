@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col mx-auto text-left md:w-2/3 w-11/12 max-w-2xl h-[80vh] justify-center text-white"
+      className="flex flex-col mx-auto text-left md:w-2/3 w-11/12 max-w-2xl md:h-[80vh] h-[130vh] justify-center text-white"
     >
       <h1 className="md:text-5xl text-3xl font-bold">
         ✌🏼¡Hola!, soy{" "}

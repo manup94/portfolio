@@ -45,7 +45,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
     <Link
       href={project.url}
-      className="py-4 px-2.5 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate  rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
+      className="py-4 shadow-lg shadow-black/20 px-2.5 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate  rounded-xl bg-white/5 ring-1 ring-black/5"
     >
       <div className="w-1/4 mx-auto sm:hidden flex">
         <img
