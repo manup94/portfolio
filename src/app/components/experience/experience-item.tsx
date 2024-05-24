@@ -32,7 +32,7 @@ const icons: any = {
 
 const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 ">
       <div>
         <h2 className="text-xl font-bold">{experience.puesto}</h2>
         <div className="flex gap-3 items-center">

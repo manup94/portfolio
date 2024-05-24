@@ -3,18 +3,14 @@ import ExperienceItem from "./experience-item";
 
 const ExperienceGrid = () => {
   return (
-    <section
-      id="experiencia"
-      className="w-full flex items-center py-12 md:py-24 md:h-[80vh] h-[130vh]"
-    >
-      <div className="container px-4 md:px-6 mx-auto">
-        <div className="space-y-4 text-white">
-          <div className="grid md:gap-6 gap-12 md:grid-cols-2 grid-cols-1">
-            {experiences.map((elm) => {
-              return <ExperienceItem key={elm.id} experience={elm} />;
-            })}
-          </div>
-        </div>
+    <section className="flex items-center px-4 py-12 md:py-24 md:h-[80vh] h-[120vh]">
+      <div
+        id="experiencia"
+        className="text-white space-y-4 grid md:gap-6 gap-12 md:grid-cols-2 grid-cols-1"
+      >
+        {experiences.map((elm) => {
+          return <ExperienceItem key={elm.id} experience={elm} />;
+        })}
       </div>
     </section>
   );

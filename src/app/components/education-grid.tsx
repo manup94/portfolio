@@ -6,7 +6,7 @@ const EducationGrid = () => {
   return (
     <section
       id="estudios"
-      className="flex md:flex-row flex-col justify-center items-center gap-6 py-12 md:py-24 lg:py-32 md:h-[80vh] h-[130vh]"
+      className="flex md:flex-row flex-col justify-center items-center gap-6 py-12 md:py-24 lg:py-32 md:h-[80vh] h-[100vh]"
     >
       <Ironhack className="md:scale-100 scale-75" />
       <div className="md:w-1/2 w-11/12 flex flex-col gap-2 text-white">
