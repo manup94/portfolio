@@ -59,7 +59,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
       "
       >
         <div className="w-1/4 sm:flex hidden">
-          <img className="max-w-22 mx-auto max-h-24" src={project.imageUrl} />
+          <img
+            className="max-w-22 mx-auto max-h-24"
+            alt="project image"
+            src={project.imageUrl}
+          />
         </div>
         <div className="w-3/4 flex flex-col justify-between">
           <h2 className="text-white text-xl font-bold">{project.name}</h2>
