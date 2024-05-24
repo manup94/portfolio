@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/navbar";
+import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
   title: "Manuel Pérez - Portfolio",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-pattern">
+      <body className={`bg-pattern ${GeistSans.className}`}>
         <Navbar />
         {children}
       </body>
