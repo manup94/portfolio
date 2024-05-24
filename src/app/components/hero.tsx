@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col mx-auto text-center md:text-left md:w-2/3 w-11/12 max-w-2xl h-[80vh] justify-center text-white"
+      className="flex flex-col mx-auto text-left md:w-2/3 w-11/12 max-w-2xl h-[80vh] justify-center text-white"
     >
       <h1 className="md:text-5xl text-3xl font-bold">
         ✌🏼¡Hola!, soy{" "}
-        <span className="bg-gradient-to-r from-blue-700 to-blue-300 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-300 to-slate-50 bg-clip-text text-transparent">
           Manuel
         </span>
         .
