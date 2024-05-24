@@ -48,7 +48,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
       className="py-4 px-2.5 transition-all duration-300 ease-in-out hover:scale-105 flex flex-col gap-3 isolate  rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5"
     >
       <div className="w-1/4 mx-auto sm:hidden flex">
-        <img className="max-w-22 mx-auto max-h-24" src={project.imageUrl} />
+        <img
+          alt={`${project.name}-img`}
+          className="max-w-22 mx-auto max-h-24"
+          src={project.imageUrl}
+        />
       </div>
       <div
         className="flex gap-3 items-center justify-between
