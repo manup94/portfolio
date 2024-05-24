@@ -31,7 +31,6 @@ const icons: any = {
 };
 
 const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
-  console.log(experience);
   return (
     <div className="flex flex-col gap-2">
       <div>
