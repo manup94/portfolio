@@ -77,7 +77,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
           </div>
         </div>
       </div>
-      <div className="px-2 md:text-lg text-base">
+      <div className="md:px-2 px-0 md:text-lg text-base">
         <p className="text-white">{project.description}</p>
       </div>
     </Link>
