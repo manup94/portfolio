@@ -49,7 +49,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
     >
       <div className="w-1/4 mx-auto sm:hidden flex">
         <img
-          alt={`${project.name}-img`}
+          alt="project image"
           className="max-w-22 mx-auto max-h-24"
           src={project.imageUrl}
         />
