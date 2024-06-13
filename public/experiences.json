@@ -1,20 +1,20 @@
 [
   {
     "id": 0,
-    "fechaInicio": "09/2023",
-    "fechaFinal": "10/2023",
-    "puesto": "Fullstack Developer",
-    "stack": ["Next", "React", "TypeScript", "Sanity", "Tailwind"],
-    "empresa": "Freelance",
-    "responsabilidades": "Desarrollo de la nueva página web para la ONG Uplanet como desarrollador freelance. Utilizamos Next.js para el desarrollo del frontend y para el backend establecimos una conexión con el CRM Sanity. Esto permitió al cliente mantener y personalizar su página web sin necesidad de intervenir en el código directamente."
-  },
-  {
-    "id": 1,
     "fechaInicio": "11/2023",
     "fechaFinal": "04/2024",
     "puesto": "Frontend Developer",
     "stack": ["Next", "React", "TypeScript", "Tailwind", "Prisma"],
     "empresa": "A-safe Digital",
-    "responsabilidades": "En el equipo de desarrollo de frontend especializado en Next.js, React y Tailwind. Especial énfasis en escribir código limpio y reutilizable para crear interfaces dinámicas, comprometido con la entrega puntual de proyectos de calidad en equipos multidisciplinarios."
+    "responsabilidades": "Desarrollador en el equipo de frontend especializado en Next.js, React y Tailwind. Especial énfasis en escribir código limpio y reutilizable para crear interfaces dinámicas, comprometido con la entrega puntual de proyectos de calidad en equipos multidisciplinarios. Proyectos a destacar: CRM, Libreria de componentes propia, Web corporativa."
+  },
+  {
+    "id": 1,
+    "fechaInicio": "09/2023",
+    "fechaFinal": "10/2023",
+    "puesto": "Fullstack Developer",
+    "stack": ["Next", "React", "TypeScript", "Sanity", "Tailwind"],
+    "empresa": "Freelance",
+    "responsabilidades": "Desarrollo de la nueva página web para la ONG Uplanet como desarrollador freelance. Utilizamos Next.js para el desarrollo del frontend y para el backend establecimos una conexión con el CMS Sanity. Esto permitió al cliente mantener y personalizar su página web sin necesidad de intervenir en el código directamente."
   }
 ]
