@@ -11,7 +11,7 @@ export async function contactUs(
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        authorization: process.env.LOOPS_ID!,
+        authorization: process.env.TRANSACTIONAL_ID!,
       },
       body: JSON.stringify(formData),
     })

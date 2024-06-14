@@ -37,7 +37,7 @@ const Form = () => {
           }),
           headers: {
             "Content-Type": "application/json",
-            authorization: process.env.LOOPS_ID!,
+            authorization: `Bearer ${process.env.API_KEY}`,
           },
         }
       )
