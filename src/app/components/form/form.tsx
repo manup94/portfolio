@@ -39,111 +39,72 @@ export function Form() {
 
   return (
     <section id="contacto" className="h-[100vh] flex flex-col justify-center">
-      <div className="lg:p-20 p-4 md:w-1/2 w-11/12 flex flex-col gap-12 mx-auto text-white shadow-lg shadow-black/20 rounded-xl bg-white/5 ring-1 ring-black/5">
-        <h2 className="text-xl text-center font-bold">
-          ¿Tienes un nuevo proyecto en mente?
-        </h2>
-        <form
-          ref={formRef}
-          action={formAction}
-          onSubmit={(evt) => {
-            evt.preventDefault()
-            handleSubmit(() => {
-              formAction(new FormData(formRef.current!))
-            })(evt)
-          }}
-          className="flex flex-col justify-center gap-5"
-        >
-          <div className="xl:flex justify-between">
-            <motion.fieldset
-              initial={{ height: "70px" }}
-              animate={{ height: errors.name ? "90px" : "70px" }}
-              transition={{ duration: 0.3 }}
-              className="flex flex-col gap-1 xl:mb-0 mb-5"
-            >
-              <div className="flex flex-col xl:gap-2.5 gap-1 z-30">
-                <label className="font-semibold" htmlFor="name">
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  data-error={!!errors.name?.message}
-                  placeholder="Manuel..."
-                  className="rounded-md bg-white px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
-                  {...register("name")}
-                />
-              </div>
-              {errors.name && (
-                <motion.p
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-red-500 z-10"
-                >
-                  {errors.name.message}
-                </motion.p>
-              )}
-            </motion.fieldset>
-            <motion.fieldset
-              initial={{ height: "70px" }}
-              animate={{ height: errors.name ? "90px" : "70px" }}
-              transition={{ duration: 0.3 }}
-              className="flex flex-col gap-1"
-            >
-              <div className="flex flex-col xl:gap-2.5 gap-1  z-30">
-                <label className="font-semibold" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="uWj6N@example.com"
-                  data-error={!!errors.emailContact?.message}
-                  className="rounded-md px-2.5 py-2 bg-white outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
-                  {...register("emailContact")}
-                />
-              </div>
-              {errors.emailContact && (
-                <motion.p
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-red-500"
-                >
-                  {errors.emailContact.message}
-                </motion.p>
-              )}
-            </motion.fieldset>
-          </div>
-          <motion.div
-            initial={{ height: "auto" }}
-            animate={{ height: errors.message ? "auto" : "auto" }}
-            transition={{ duration: 0.3 }}
-            className="flex w-full flex-col gap-1"
+      {state.message === "" ? (
+        <div className="lg:p-20 p-4 md:w-1/2 w-11/12 flex flex-col gap-12 mx-auto text-white shadow-lg shadow-black/20 rounded-xl bg-white/5 ring-1 ring-black/5">
+          <h2 className="text-xl text-center font-bold">
+            ¿Tienes un nuevo proyecto en mente?
+          </h2>
+          <form
+            ref={formRef}
+            action={formAction}
+            onSubmit={(evt) => {
+              evt.preventDefault()
+              handleSubmit(() => {
+                formAction(new FormData(formRef.current!))
+              })(evt)
+            }}
+            className="flex flex-col justify-center gap-5"
           >
-            <label className="font-semibold" htmlFor="message">
-              Mensaje
-            </label>
-            <textarea
-              className="h-40 resize-none rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
-              placeholder="Me pongo en contacto por..."
-              data-error={!!errors.message?.message}
-              {...register("message")}
-            />
-            <AnimatePresence>
-              {errors.message && (
-                <motion.div
-                  key={errors.message.message}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{
-                    height: errors.message ? "auto" : 0,
-                    opacity: errors.message ? 1 : 0,
-                  }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
+            <div className="xl:flex justify-between">
+              <motion.fieldset
+                initial={{ height: "70px" }}
+                animate={{ height: errors.name ? "90px" : "70px" }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-col gap-1 xl:mb-0 mb-5"
+              >
+                <div className="flex flex-col xl:gap-2.5 gap-1 z-30">
+                  <label className="font-semibold" htmlFor="name">
+                    Nombre
+                  </label>
+                  <input
+                    type="text"
+                    data-error={!!errors.name?.message}
+                    placeholder="Manuel..."
+                    className="rounded-md bg-white px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
+                    {...register("name")}
+                  />
+                </div>
+                {errors.name && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-red-500 z-10"
+                  >
+                    {errors.name.message}
+                  </motion.p>
+                )}
+              </motion.fieldset>
+              <motion.fieldset
+                initial={{ height: "70px" }}
+                animate={{ height: errors.name ? "90px" : "70px" }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-col gap-1"
+              >
+                <div className="flex flex-col xl:gap-2.5 gap-1  z-30">
+                  <label className="font-semibold" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="uWj6N@example.com"
+                    data-error={!!errors.emailContact?.message}
+                    className="rounded-md px-2.5 py-2 bg-white outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
+                    {...register("emailContact")}
+                  />
+                </div>
+                {errors.emailContact && (
                   <motion.p
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -151,16 +112,63 @@ export function Form() {
                     transition={{ duration: 0.3 }}
                     className="text-red-500"
                   >
-                    {errors.message.message}
+                    {errors.emailContact.message}
                   </motion.p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+                )}
+              </motion.fieldset>
+            </div>
+            <motion.div
+              initial={{ height: "auto" }}
+              animate={{ height: errors.message ? "auto" : "auto" }}
+              transition={{ duration: 0.3 }}
+              className="flex w-full flex-col gap-1"
+            >
+              <label className="font-semibold" htmlFor="message">
+                Mensaje
+              </label>
+              <textarea
+                className="h-40 resize-none rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
+                placeholder="Me pongo en contacto por..."
+                data-error={!!errors.message?.message}
+                {...register("message")}
+              />
+              <AnimatePresence>
+                {errors.message && (
+                  <motion.div
+                    key={errors.message.message}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{
+                      height: errors.message ? "auto" : 0,
+                      opacity: errors.message ? 1 : 0,
+                    }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <motion.p
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-red-500"
+                    >
+                      {errors.message.message}
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
 
-          <SubmitButton />
-        </form>
-      </div>
+            <SubmitButton />
+          </form>
+        </div>
+      ) : (
+        <div className="lg:p-20 p-4 md:w-1/2 w-11/12 flex flex-col gap-12 mx-auto text-white shadow-lg shadow-black/20 rounded-xl bg-white/5 ring-1 ring-black/5">
+          <h2 className="text-center">
+            Gracias por contactar, en breves recibira una respuesta.
+          </h2>
+        </div>
+      )}
     </section>
   )
 }
