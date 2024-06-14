@@ -164,7 +164,7 @@ export function Form() {
         </div>
       ) : (
         <div className="lg:p-20 p-4 md:w-1/2 w-11/12 flex flex-col gap-12 mx-auto text-white shadow-lg shadow-black/20 rounded-xl bg-white/5 ring-1 ring-black/5">
-          <h2 className="text-center">
+          <h2 className="text-center font-bold text-xl">
             Gracias por contactar, en breves recibira una respuesta.
           </h2>
         </div>
