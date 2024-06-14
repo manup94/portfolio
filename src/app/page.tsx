@@ -1,7 +1,7 @@
 import EducationGrid from "./components/education-grid"
 import ExperienceGrid from "./components/experience/experience-grid"
 import Footer from "./components/footer"
-import Form from "./components/form/form"
+import { Form } from "./components/form/form"
 import Hero from "./components/hero"
 import ProjectsGrid from "./components/projects/projects-grid"
 import Separator from "./components/separator"

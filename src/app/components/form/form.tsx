@@ -3,16 +3,23 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useFormStatus, useFormState } from "react-dom"
 import { useForm } from "react-hook-form"
+import { useRef } from "react"
+import { ContactForm } from "@/app/actions"
 
 const schema = z.object({
-  email: z.string().trim().email(),
+  emailContact: z.string().trim().email(),
   name: z.string().trim().min(1),
   message: z.string().trim().min(1),
 })
 
 type SchemaType = z.infer<typeof schema>
 
-const Form = () => {
+export function Form() {
+  const formRef = useRef<HTMLFormElement>(null)
+  const [state, formAction] = useFormState(ContactForm, {
+    message: "",
+  })
+
   const {
     register,
     handleSubmit,
@@ -21,36 +28,9 @@ const Form = () => {
     resolver: zodResolver(schema),
     defaultValues: {
       name: "",
-      email: "",
+      emailContact: "",
       message: "",
     },
-  })
-
-  const handleOnSubmit = handleSubmit(async (data) => {
-    try {
-      const response = await fetch(
-        "https://app.loops.so/api/v1/transactional",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            data,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-            authorization: `Bearer ${process.env.API_KEY}`,
-          },
-        }
-      )
-      console.log(data)
-      if (response.ok) {
-        const result = await response.json()
-        console.log(result)
-      } else {
-        console.error("Error al enviar el correo")
-      }
-    } catch (error) {
-      console.error("Error al enviar la solicitud:", error)
-    }
   })
 
   return (
@@ -60,7 +40,14 @@ const Form = () => {
           ¿Tienes un nuevo proyecto en mente?
         </h2>
         <form
-          onSubmit={handleOnSubmit}
+          ref={formRef}
+          action={formAction}
+          onSubmit={(evt) => {
+            evt.preventDefault()
+            handleSubmit(() => {
+              formAction(new FormData(formRef.current!))
+            })(evt)
+          }}
           className="flex flex-col justify-center gap-5"
         >
           <div className="flex justify-between gap-2.5 ">
@@ -83,7 +70,7 @@ const Form = () => {
                 type="email"
                 placeholder="uWj6N@example.com"
                 className="rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black"
-                {...register("email")}
+                {...register("emailContact")}
               />
             </fieldset>
           </div>
@@ -97,13 +84,26 @@ const Form = () => {
               {...register("message")}
             />
           </div>
-          <button className=" text-white text-sm bg-blue-400 hover:bg-blue-600 transition-all duration-300 ease-in-out rounded-md px-2 py-3 outline-purple-800">
-            Enviar
-          </button>
+
+          <SubmitButton />
         </form>
       </div>
     </section>
   )
 }
 
-export default Form
+function SubmitButton() {
+  const { pending } = useFormStatus()
+
+  return (
+    <button
+      id="form-btn"
+      type="submit"
+      aria-disabled={pending}
+      disabled={pending}
+      className="text-white text-sm bg-blue-400 hover:bg-blue-600 transition-all duration-300 ease-in-out rounded-md px-2 py-3 outline-purple-800"
+    >
+      Enviar
+    </button>
+  )
+}
