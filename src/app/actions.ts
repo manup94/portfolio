@@ -40,7 +40,6 @@ export async function ContactForm(
           email: data.emailContact,
           message: data.message,
         },
-        attachments: [],
         ...data,
       }),
     })
@@ -49,7 +48,6 @@ export async function ContactForm(
     if (!response.ok) {
       return { message: "Failed to contact" }
     }
-
     return {
       message: responseData.message,
     }

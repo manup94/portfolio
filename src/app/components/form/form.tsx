@@ -5,11 +5,15 @@ import { useFormStatus, useFormState } from "react-dom"
 import { useForm } from "react-hook-form"
 import { useRef } from "react"
 import { ContactForm } from "@/app/actions"
+import { AnimatePresence, motion } from "framer-motion"
 
 const schema = z.object({
-  emailContact: z.string().trim().email(),
-  name: z.string().trim().min(1),
-  message: z.string().trim().min(1),
+  emailContact: z
+    .string()
+    .trim()
+    .email({ message: "Introduce un email válido" }),
+  name: z.string().trim().min(1, { message: "Este campo es requerido" }),
+  message: z.string().trim().min(1, { message: "Este campo es requerido" }),
 })
 
 type SchemaType = z.infer<typeof schema>
@@ -50,40 +54,109 @@ export function Form() {
           }}
           className="flex flex-col justify-center gap-5"
         >
-          <div className="flex justify-between gap-2.5 ">
-            <fieldset className="flex flex-col gap-2.5">
-              <label className="font-semibold" htmlFor="name">
-                Nombre
-              </label>
-              <input
-                type="text"
-                placeholder="Manuel..."
-                className="rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black"
-                {...register("name")}
-              />
-            </fieldset>
-            <fieldset className="flex flex-col gap-2.5">
-              <label className="font-semibold" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="email"
-                placeholder="uWj6N@example.com"
-                className="rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black"
-                {...register("emailContact")}
-              />
-            </fieldset>
+          <div className="flex justify-between">
+            <motion.fieldset
+              initial={{ height: "70px" }}
+              animate={{ height: errors.name ? "90px" : "70px" }}
+              transition={{ duration: 0.3 }}
+              className="flex flex-col gap-1"
+            >
+              <div className="flex flex-col gap-2.5 z-30">
+                <label className="font-semibold" htmlFor="name">
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  data-error={!!errors.name?.message}
+                  placeholder="Manuel..."
+                  className="rounded-md bg-white px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
+                  {...register("name")}
+                />
+              </div>
+              {errors.name && (
+                <motion.p
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-red-500 z-10"
+                >
+                  {errors.name.message}
+                </motion.p>
+              )}
+            </motion.fieldset>
+            <motion.fieldset
+              initial={{ height: "70px" }}
+              animate={{ height: errors.name ? "90px" : "70px" }}
+              transition={{ duration: 0.3 }}
+              className="flex flex-col gap-1"
+            >
+              <div className="flex flex-col gap-2.5 z-30">
+                <label className="font-semibold" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="uWj6N@example.com"
+                  data-error={!!errors.emailContact?.message}
+                  className="rounded-md px-2.5 py-2 bg-white outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
+                  {...register("emailContact")}
+                />
+              </div>
+              {errors.emailContact && (
+                <motion.p
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-red-500"
+                >
+                  {errors.emailContact.message}
+                </motion.p>
+              )}
+            </motion.fieldset>
           </div>
-          <div className="flex w-full flex-col gap-2.5">
+          <motion.div
+            initial={{ height: "auto" }}
+            animate={{ height: errors.message ? "auto" : "auto" }}
+            transition={{ duration: 0.3 }}
+            className="flex w-full flex-col gap-1"
+          >
             <label className="font-semibold" htmlFor="message">
               Mensaje
             </label>
             <textarea
-              className="h-48 resize-none rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black"
+              className="h-40 resize-none rounded-md px-2.5 py-2 outline-purple-800 border-blue-700 border-[1px] text-black data-[error=true]:outline-red-600"
               placeholder="Me pongo en contacto por..."
+              data-error={!!errors.message?.message}
               {...register("message")}
             />
-          </div>
+            <AnimatePresence>
+              {errors.message && (
+                <motion.div
+                  key={errors.message.message}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: errors.message ? "auto" : 0,
+                    opacity: errors.message ? 1 : 0,
+                  }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <motion.p
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-red-500"
+                  >
+                    {errors.message.message}
+                  </motion.p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
 
           <SubmitButton />
         </form>
