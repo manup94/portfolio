@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Linkedin from "../icons/linkedin";
-import Github from "../icons/github";
-import Email from "../icons/email";
+import Link from "next/link"
+import Linkedin from "../icons/linkedin"
+import Github from "../icons/github"
+import Email from "../icons/email"
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
       <Link
         aria-label="Email"
         className="hover:scale-110 transition-all duration-300 ease-in-out"
-        href="mailto:mperezpradosjose@gmail.com"
+        href="#contacto"
       >
         <Email />
       </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
         <Linkedin />
       </Link>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

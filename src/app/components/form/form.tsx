@@ -39,7 +39,7 @@ export function Form() {
 
   return (
     <section id="contacto" className="h-[100vh] flex flex-col justify-center">
-      <div className="p-20 w-1/2 flex flex-col gap-12 mx-auto text-white shadow-lg shadow-black/20 rounded-xl bg-white/5 ring-1 ring-black/5">
+      <div className="lg:p-20 p-4 md:w-1/2 w-11/12 flex flex-col gap-12 mx-auto text-white shadow-lg shadow-black/20 rounded-xl bg-white/5 ring-1 ring-black/5">
         <h2 className="text-xl text-center font-bold">
           ¿Tienes un nuevo proyecto en mente?
         </h2>
@@ -54,14 +54,14 @@ export function Form() {
           }}
           className="flex flex-col justify-center gap-5"
         >
-          <div className="flex justify-between">
+          <div className="xl:flex justify-between">
             <motion.fieldset
               initial={{ height: "70px" }}
               animate={{ height: errors.name ? "90px" : "70px" }}
               transition={{ duration: 0.3 }}
-              className="flex flex-col gap-1"
+              className="flex flex-col gap-1 xl:mb-0 mb-5"
             >
-              <div className="flex flex-col gap-2.5 z-30">
+              <div className="flex flex-col xl:gap-2.5 gap-1 z-30">
                 <label className="font-semibold" htmlFor="name">
                   Nombre
                 </label>
@@ -91,7 +91,7 @@ export function Form() {
               transition={{ duration: 0.3 }}
               className="flex flex-col gap-1"
             >
-              <div className="flex flex-col gap-2.5 z-30">
+              <div className="flex flex-col xl:gap-2.5 gap-1  z-30">
                 <label className="font-semibold" htmlFor="email">
                   Email
                 </label>
